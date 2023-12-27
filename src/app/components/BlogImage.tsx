@@ -9,7 +9,13 @@ const BlogImage: FC<BlogImageProps> = () => {
   return (
     <div className="w-10/12 h-fit rounded-xl p-3 bg-white border-black border-t-2 border-l-2 border-b-8 border-r-8 flex flex-col items-center desktop:w-3/12 tablet:w-8/12 justify-evenly">
       <div className="h-64 rounded-xl w-11/12 relative">
-        <Image src={blogPic} alt="blog" objectFit="container" layout="fill" />
+        <Image
+          src={blogPic}
+          alt="blog"
+          objectFit="container"
+          priority
+          layout="fill"
+        />
       </div>
       <div className="h-72 mt-5  flex flex-col  justify-evenly  w-11/12">
         <div className="bg-yellow-400 h-8 rounded-md w-20 flex justify-center items-center">
@@ -24,6 +30,7 @@ const BlogImage: FC<BlogImageProps> = () => {
         <div className="h-12 w-2/3  flex px-1 items-center">
           <div className="h-10 w-10 rounded-full bg-blue-600 relative">
             <Image
+              priority
               src={profile}
               alt="profile"
               objectFit="container"
